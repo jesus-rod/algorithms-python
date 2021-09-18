@@ -15,13 +15,13 @@ class MaximizeCapital:
 
         while numberOfProjects > 0:
             numberOfProjects -= 1
-            print("did this", self.savedCapital)
             # we continue going through or minHeap while it's not empty
             # and the "cheapest" project is less or equal that our savedCapital
             while self.minCapitalHeap and self.minCapitalHeap[0][0] <= self.savedCapital:
                 capital, index = heappop(self.minCapitalHeap)
                 heappush(self.maxProfitHeap, -profits[index])
 
+            # if the maxProfitHeap is empty, we need more capital. Terminate this loop.
             if len(self.maxProfitHeap) == 0:
                 break
 
