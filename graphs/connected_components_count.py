@@ -1,9 +1,10 @@
 from collections import deque
 
+
+""""
 Write a function, connected_components_count, that takes in the adjacency list of an undirected graph.
 The function should return the number of connected components within the graph.
 
-""""
 connected_components_count({
   0: [8, 1, 5],
   1: [0],
