@@ -31,3 +31,30 @@ testArray.insert(0, 4)
 
 testArray.append(5)
 print(testArray)
+
+# order
+tuple_list = [(1, 2), (3, 4), (2, 3)]
+tuple_list.sort()
+print(tuple_list)
+
+
+class People:
+    def __init__(self, age):
+        self.age = age
+
+    def __str__(self):
+        return "this aint workin"
+
+    def __repr__(self):
+        return f'this person is {self.age}'
+
+
+kid = People(8)
+adult = People(21)
+toddler = People(4)
+teenager = People(14)
+
+
+people_list = [toddler, kid, teenager, adult]
+people_list.sort(key=lambda x: x.age)
+print(people_list)
